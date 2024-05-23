@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,17 @@ Route::get('/', function () {
 Route::get('/master', function () {
     return view('master');
 });
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/loginstaff', function(){
+    return view('loginstaff');
+})->name('loginstaff');
+
+Route::get('/signin', function () {
+    return view('signin');
+});
+Route::post('/authenticate', [LoginController::class, 'authenticate']);
+Route::post('/signin', [LoginController::class, 'registration']);
