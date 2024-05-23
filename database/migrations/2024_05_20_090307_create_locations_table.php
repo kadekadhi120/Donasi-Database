@@ -10,9 +10,13 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->string('location_id', 17)->primary();
-            $table->string('location_name', 50)->nullable();
-            $table->string('coordinates', 100)->nullable();
-            $table->integer('population')->nullable();
+            $table->string('provinsi', 50)->nullable();
+            $table->string('KabupatenKota', 50)->nullable();
+            $table->string('kecamatan', 50)->nullable();
+            $table->string('KelurahanDesa', 50)->nullable();
+            $table->string('RTRW', 50)->nullable();
+            $table->integer('total_KK')->nullable();
+            $table->date('date')->nullable();
         });
     }
 
