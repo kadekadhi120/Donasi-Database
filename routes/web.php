@@ -37,5 +37,8 @@ Route::get('/loginstaff', function(){
 Route::get('/signin', function () {
     return view('signin');
 });
+
+
+
 Route::post('/authenticate', [LoginController::class, 'authenticate']);
 Route::post('/signin', [LoginController::class, 'registration']);

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CONSULT - Consultancy Website Template</title>
+    <title>RescueAid Indonesia</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -30,9 +30,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
-<!-- <div> -->
-    <!-- Topbar Start -->
-    <!-- <div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
+<!-- Topbar Start -->
+<!-- <div>
+<div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
@@ -61,18 +61,18 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
-            <h1 class="m-0 text-uppercase text-primary"><i class="far fa-smile text-primary me-2"></i>consult</h1>
+            <h1 class="m-0 text-uppercase text-primary"><i class="far fa-smile text-primary me-2"></i>RescueAid Indonesia</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 me-n3">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <div class="nav-item dropdown">
-                    <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <!-- <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
                         <a href="blog.html" class="dropdown-item">Blog Grid</a>
                         <a href="detail.html" class="dropdown-item">Blog Detail</a>
@@ -80,9 +80,9 @@
                         <a href="quote.html" class="dropdown-item">Quote Form</a>
                         <a href="team.html" class="dropdown-item">The Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                    </div> -->
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div> -->
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -90,65 +90,68 @@
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase">Business Consultancy</h5>
-                            <h1 class="display-1 text-white mb-md-4">We Provide Solution On Your Business</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+    <section id="home">
+        <div class="container-fluid p-0">
+            <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h5 class="text-white text-uppercase">RescueAid Indonesia</h5>
+                                <h1 class="display-1 text-white mb-md-4">Rescure and Rebuild Lives Together</h1>
+                                <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a> -->
+                                <a href="#contact" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h5 class="text-white text-uppercase">RescueAid Indonesia</h5>
+                                <h1 class="display-1 text-white mb-md-4">Bring Hope With Every Helping Hand</h1>
+                            <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a> -->
+                                <a href="#contact" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase">Business Consultancy</h5>
-                            <h1 class="display-1 text-white mb-md-4">Take Our Help To Reach The Top Level</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div>
+    </section>
     <!-- Carousel End -->
 
 
     <!-- About Start -->
+    <section id="about">
     <div class="container-fluid bg-secondary p-0">
         <div class="row g-0">
             <div class="col-lg-6 py-6 px-5">
-                <h1 class="display-5 mb-4">Welcome To <span class="text-primary">CONSULT</span></h1>
-                <h4 class="text-primary mb-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita duo justo magna dolore</h4>
-                <p class="mb-4">Et stet ipsum nonumy rebum eos justo, accusam invidunt aliquyam stet magna at et sanctus, vero sea sit amet dolores, sit dolor duo invidunt dolor, kasd rebum consetetur diam invidunt erat stet. Accusam nonumy lorem kasd eirmod. Justo clita sadipscing ea invidunt rebum sadipscing consetetur. Amet diam amet amet sanctus sanctus invidunt erat ipsum eirmod.</p>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Get A Quote</a>
+                <h1 class="display-5 mb-4">Welcome To <span class="text-primary">RescueAid Indonesia</span></h1>
+                <!-- <h4 class="text-primary mb-4">Diam dolor diam ipsum sit. Clita erat ipsum et lorem stet no lorem sit clita duo justo magna dolore</h4> -->
+                <p class="mb-4 align-items-center justify-content-center justified-text">Di RescueAid, kami percaya bahwa setiap tindakan kebaikan sangat berarti. Bersama-sama, kita dapat membuat perbedaan signifikan dalam kehidupan mereka yang membutuhkan. Bergabunglah dengan kami dalam misi untuk membawa harapan dan memulihkan kehidupan, satu komunitas pada satu waktu.</p>
+                <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Get A Quote</a> -->
             </div>
             <div class="col-lg-6">
-                <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
+                <div class="h-100 d-flex flex-column justify-content-center justified-text bg-primary p-5">
                     <div class="d-flex text-white mb-5">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
                             <i class="fa fa-user-tie fs-4"></i>
                         </div>
                         <div class="ps-4">
-                            <h3>Business Planning</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem sit clita duo</p>
+                            <h3>Kepedulian dan Kasih Sayang</h3>
+                            <p class="mb-0">Dengan rasa kepedulian dan kasih sayang, kami berusaha memberikan dukungan yang tulus dan penuh empati kepada mereka yang membutuhkan.</p>
                         </div>
                     </div>
                     <div class="d-flex text-white mb-5">
@@ -156,8 +159,8 @@
                             <i class="fa fa-chart-line fs-4"></i>
                         </div>
                         <div class="ps-4">
-                            <h3>Financial Analaysis</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem sit clita duo</p>
+                            <h3>Kerjasama dan Solidaritas</h3>
+                            <p class="mb-0">Melalui kerja sama yang erat antara relawan, donatur, dan mitra organisasi, kami dapat memberikan bantuan yang lebih efektif dan mencapai lebih banyak orang yang membutuhkan.</p>
                         </div>
                     </div>
                     <div class="d-flex text-white">
@@ -165,8 +168,8 @@
                             <i class="fa fa-balance-scale fs-4"></i>
                         </div>
                         <div class="ps-4">
-                            <h3>legal Advisory</h3>
-                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem sit clita duo</p>
+                            <h3>Transparansi dan Akuntabilitas</h3>
+                            <p class="mb-0">Setiap sumbangan yang terkumpul dan disalurkan akan dilaporkan secara jelas, memastikan bahwa setiap kontribusi digunakan dengan baik untuk membantu mereka yang terdampak bencana.</p>
                         </div>
                     </div>
                 </div>
@@ -179,7 +182,7 @@
     <!-- Services Start -->
     <div class="container-fluid pt-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 mb-0">What We Offer</h1>
+            <h1 class="display-5 mb-0">Vision Mission</h1>
             <hr class="w-25 mx-auto bg-primary">
         </div>
         <div class="row g-5">
@@ -188,8 +191,8 @@
                     <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-user-tie fa-2x"></i>
                     </div>
-                    <h3 class="mb-3">Business Research</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                    <h3 class="mb-3">Bantuan Darurat</h3>
+                    <p class="mb-0">Menyediakan bantuan darurat seperti makanan, air bersih, perlindungan, dan perawatan medis</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -197,8 +200,8 @@
                     <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-chart-pie fa-2x"></i>
                     </div>
-                    <h3 class="mb-3">Stretagic Planning</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                    <h3 class="mb-3">Memulihkan</h3>
+                    <p class="mb-0">Menggalang sumber daya dan bekerja sama dengan masyarakat setempat untuk memulihkan infrastruktur</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -206,8 +209,8 @@
                     <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-chart-line fa-2x"></i>
                     </div>
-                    <h3 class="mb-3">Market Analysis</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                    <h3 class="mb-3">Memberdayakan Masyarakat</h3>
+                    <p class="mb-0">Mendorong partisipasi aktif dan keterlibatan masyarakat dalam proses pemulihan dan sumber daya </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -215,8 +218,8 @@
                     <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-chart-area fa-2x"></i>
                     </div>
-                    <h3 class="mb-3">Financial Analaysis</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                    <h3 class="mb-3">Pencegahan Bencana</h3>
+                    <p class="mb-0">Mengadakan kampanye penyuluhan dan pelatihan tentang langkah-langkah pencegahan bencana</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -224,8 +227,8 @@
                     <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-balance-scale fa-2x"></i>
                     </div>
-                    <h3 class="mb-3">legal Advisory</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                    <h3 class="mb-3">Akurat dan Bermutu</h3>
+                    <p class="mb-0"> Menyediakan informasi terkini tentang kondisi bencana dan cara untuk membantu kepada masyarakat umum</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -233,8 +236,8 @@
                     <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <i class="fa fa-house-damage fa-2x"></i>
                     </div>
-                    <h3 class="mb-3">Tax & Insurance</h3>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                    <h3 class="mb-3">Membangun Jaringan</h3>
+                    <p class="mb-0">Membangun kemitraan yang kuat dengan organisasi bantuan lokal, nasional, dan internasional</p>
                 </div>
             </div>
         </div>
@@ -255,21 +258,21 @@
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-cubes fs-4 text-white"></i>
                         </div>
-                        <h3>Best In Industry</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <h3>Komitmen</h3>
+                        <p class="mb-0">memiliki komitmen yang kuat untuk memberikan bantuan darurat yang cepat dan efektif</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-percent fs-4 text-white"></i>
                         </div>
-                        <h3>99% Success Rate</h3>
+                        <h3>Keterlibatan</h3>
                         <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-award fs-4 text-white"></i>
                         </div>
-                        <h3>Award Winning</h3>
+                        <h3>Transparansi</h3>
                         <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                     </div>
                 </div>
@@ -278,7 +281,7 @@
                 <div class="d-block bg-primary h-100 text-center">
                     <img class="img-fluid" src="img/feature.jpg" alt="">
                     <div class="p-4">
-                        <p class="text-white mb-4">Clita nonumy sanctus nonumy et clita tempor, et sea amet ut et sadipscing rebum amet takimata amet, sed accusam eos eos dolores dolore et. Et ea ea dolor rebum invidunt clita eos. Sea accusam stet stet ipsum, sit ipsum et ipsum kasd</p>
+                        <p class="text-white mb-4">RescueAid memiliki komitmen kuat untuk memberikan bantuan darurat dan pemulihan jangka panjang bagi mereka yang terkena dampak bencana di Malang, sementara juga mendorong keterlibatan aktif masyarakat dan membangun kemitraan yang kokoh untuk memberikan dampak positif yang nyata.</p>
                         <a href="" class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2">Learn More</a>
                     </div>
                 </div>
@@ -289,32 +292,33 @@
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="far fa-smile-beam fs-4 text-white"></i>
                         </div>
-                        <h3>100% Happy Client</h3>
+                        <h3>Kolaborasi</h3>
                         <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-user-tie fs-4 text-white"></i>
                         </div>
-                        <h3>Professional Advisors</h3>
+                        <h3>Ketahanan</h3>
                         <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-headset fs-4 text-white"></i>
                         </div>
-                        <h3>24/7 Customer Support</h3>
+                        <h3>Dampak Langsung</h3>
                         <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </section>
     <!-- Features Start -->
 
 
     <!-- Quote Start -->
-    <div class="container-fluid bg-secondary px-0">
+    <!-- <div class="container-fluid bg-secondary px-0">
         <div class="row g-0">
             <div class="col-lg-6 py-6 px-5">
                 <h1 class="display-5 mb-4">Request A Free Quote</h1>
@@ -355,12 +359,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Quote End -->
 
 
     <!-- Team Start -->
-    <div class="container-fluid py-6 px-5">
+    <!-- <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 mb-0">Our Team Members</h1>
             <hr class="w-25 mx-auto bg-primary">
@@ -393,13 +397,22 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4">
+                <div class="team-item position-relative overflow-hidden">
+                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                    <div class="team-text w-100 position-absolute top-50 text-center bg-primary p-4">
+                        <h3 class="text-white">Full Name</h3>
+                        <p class="text-white text-uppercase mb-0">Designation</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid bg-secondary p-0">
+    <!-- <div class="container-fluid bg-secondary p-0">
         <div class="row g-0">
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative h-100">
@@ -432,11 +445,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
 
     <!-- Blog Start -->
+    <section id="service">
     <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 mb-0">Latest Blog Post</h1>
@@ -508,10 +522,12 @@
             </div>
         </div>
     </div>
+    </section>
     <!-- Blog End -->
     
 
     <!-- Footer Start -->
+    <section id="contact">
     <div class="container-fluid bg-primary text-secondary p-5">
         <div class="row g-5">
             <div class="col-12 text-center">
@@ -567,6 +583,7 @@
     <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
         <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">Your Site Name</a>. All Rights Reserved. Designed by <a class="text-secondary border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
     </div>
+    </section>
     <!-- Footer End -->
 
 
