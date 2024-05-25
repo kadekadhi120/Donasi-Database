@@ -16,7 +16,7 @@ class CreateNeedTable extends Migration
 
             // Foreign key constraints
             $table->foreign('location_id')->references('location_id')->on('locations')->onDelete('set null');
-            $table->foreign('food_id')->references('food_id')->on('food_inventory')->onDelete('set null');
+            $table->foreign('food_id')->references('food_id')->on('food_inventories')->onDelete('set null');
             
             // Timestamps
             $table->timestamps();

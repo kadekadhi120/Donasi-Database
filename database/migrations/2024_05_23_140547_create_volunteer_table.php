@@ -9,12 +9,11 @@ class CreateVolunteerTable extends Migration
     public function up(): void
     {
         Schema::create('volunteers', function (Blueprint $table) {
-            $table->string('volunteer_id', 17)->primary();
+            $table->id();
+            $table->string('volunteer_id', 17)->unique();
             $table->string('volunteer_name', 50);
             $table->string('volunteer_address', 100)->nullable();
             $table->string('volunteer_contact', 20)->nullable();
-            
-            // Timestamps
             $table->timestamps();
         });
     }

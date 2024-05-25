@@ -9,10 +9,12 @@ class CreateStaffTable extends Migration
     public function up()
     {
         Schema::create('staff', function (Blueprint $table) {
-            $table->string('staff_id', 10)->primary();
-            $table->string('satff_name', 50)->nullable();
-            $table->string('satff_address', 100)->nullable();
-            $table->string('satff_contact', 20)->nullable();
+            $table->id();
+            $table->string('staff_id', 10)->unique();
+            $table->string('staff_name', 50)->nullable();
+            $table->string('staff_address', 100)->nullable();
+            $table->string('staff_contact', 20)->nullable();
+            $table->timestamps();
         });
     }
 
