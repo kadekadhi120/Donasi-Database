@@ -9,4 +9,9 @@ class Donor extends Model
 {
     use HasFactory;
     protected $fillable = ['donor_NIK', 'donor_name', 'donor_address', 'donor_contact'];
+
+    public function Donation(): HasOne
+    {
+        return $this->HasOne(Donation::class);
+    }
 }

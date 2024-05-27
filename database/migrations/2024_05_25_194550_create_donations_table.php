@@ -21,13 +21,13 @@ return new class extends Migration
             $table->date('donation_date')->nullable();
             $table->timestamps();
 
-            $table->foreign('staff_id')->references('staff_id')->on('staff');
-            $table->foreign('donor_NIK')->references('donor_NIK')->on('donors');
-            $table->foreign('food_id')->references('food_id')->on('food_inventories');
+            $table->foreign('staff_id')->references('staff_id')->on('staff')->onDelete('cascade');
+            $table->foreign('donor_NIK')->references('donor_NIK')->on('donors')->onDelete('cascade');
+            $table->foreign('food_id')->references('food_id')->on('food_inventories')->onDelete('cascade');
 
         });
     }
-
+    
     /**
      * Reverse the migrations.
      */

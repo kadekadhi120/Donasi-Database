@@ -9,4 +9,10 @@ class FoodInventory extends Model
 {
     use HasFactory;
     protected $fillable = ['food_id', 'food_name', 'quantity'];
+
+    public function Donation(): HasOne
+    {
+        return $this->HasOne(Donation::class);
+    }
 }
+

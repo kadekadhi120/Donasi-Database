@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources;
 
+use App\Models\Donor;
+use App\Models\FoodInventory;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Donation;
@@ -26,12 +28,19 @@ class DonationResource extends Resource
         return $form
             ->schema([
                 TextInput::make('donation_id')->required(),
-                TextInput::make('staff')->label('Staff')->required(),
-                TextInput::make('donor')->label('Donor')->required(),
-                TextInput::make('food_inventories')->label('Food Inventory')->required(),
+                // TextInput::make('donor_NIK')->label('Donor')->required(),
+                Select::make("donor_NIK")
+                ->label("Donor Name")
+                ->options(Donor::all()->pluck('donor_name', 'donor_NIK'))
+                    ->searchable()
+                    ->required(),
+                Select::make('food_id')
+                    ->label('Food Inventory')
+                    ->options(FoodInventory::all()->pluck('food_name', 'food_id'))
+                    ->searchable()
+                    ->required(),
                 TextInput::make('donation_amount')->required(),
-                DatePicker::make('date')->required()->format('y-m-d'),
-
+                DatePicker::make('donation_date')->required()->format('Y-m-d'),
             ]);
     }
 
@@ -39,7 +48,7 @@ class DonationResource extends Resource
     {
         return $table
             ->columns([
-                //
+                
             ])
             ->filters([ 
                 //

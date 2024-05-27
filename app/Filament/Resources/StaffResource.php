@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Hash;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\StaffResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -34,6 +35,13 @@ class StaffResource extends Resource
                     TextInput::make('staff_contact')->required(),
                     ])
                     ->columns(2),
+                Card::make()
+                    ->relationship('user')
+                    ->schema([
+                        TextInput::make('email')->email()->required()->unique(ignoreRecord: true),
+                        TextInput::make('password')->required(),
+                    ])
+                    ->columns(2)
             ]);
     }
 
