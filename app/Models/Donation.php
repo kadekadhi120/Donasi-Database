@@ -9,18 +9,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Donation extends Model
 {
     use HasFactory;
+
     protected $fillable = ['donation_id', 'staff_id', 'donor_NIK', 'food_id', 'donation_amount', 'donation_date'];
-    // protected $rules = [
-    //     'staff_id' => 'required|exists:staff,id',
-    // ];
-    public function food_inventories(): BelongsTo
+
+    public function foodInventory(): BelongsTo
     {
-        return $this->belongsToMany(FoodInventory::class);
+        return $this->belongsTo(FoodInventory::class, 'food_id');
     }
 
-    public function Donor(): BelongsTo
+    public function donor(): BelongsTo
     {
-        return $this->belongsToMany(Donor::class);
+        return $this->belongsTo(Donor::class, 'donor_NIK');
     }
- 
 }

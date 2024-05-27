@@ -2,15 +2,16 @@
 
 namespace App\Filament\Resources;
 
-use App\Models\Donor;
-use App\Models\FoodInventory;
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Donor;
 use App\Models\Donation;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Models\FoodInventory;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
 use Illuminate\Database\Eloquent\Builder;
@@ -48,7 +49,26 @@ class DonationResource extends Resource
     {
         return $table
             ->columns([
+                TextColumn::make('donation_id')
+                ->label('Donation ID')
+                ->sortable(),
+                TextColumn::make('donor_NIK')
+            ->label('Donor Name')
+            // ->getTable (function ($record) {
+            //     return $record->donors->donor_name;
+            // })
+            ->sortable(),
                 
+            TextColumn::make('food_id'),
+            
+                
+           TextColumn::make('donation_amount')
+                ->label('Donation Amount')
+                ->sortable(),
+            TextColumn::make('donation_date')
+                ->label('Donation Date')
+                ->sortable()
+                ->date('Y-m-d'),
             ])
             ->filters([ 
                 //
