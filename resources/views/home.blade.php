@@ -266,14 +266,14 @@
                             <i class="fa fa-percent fs-4 text-white"></i>
                         </div>
                         <h3>Keterlibatan</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">Kami mendorong keterlibatan aktif dari masyarakat lokal dalam proses penanganan bencana alam.</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-award fs-4 text-white"></i>
                         </div>
                         <h3>Transparansi</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">Memiliki prinsip transparansi dan akuntabilitas tinggi dan menyediakan laporan yang jelas tentang penggunaan dana serta hasil dari setiap kegiatan yang dilakukan.</p>
                     </div>
                 </div>
             </div>
@@ -281,8 +281,8 @@
                 <div class="d-block bg-primary h-100 text-center">
                     <img class="img-fluid" src="img/feature.jpg" alt="">
                     <div class="p-4">
-                        <p class="text-white mb-4">RescueAid memiliki komitmen kuat untuk memberikan bantuan darurat dan pemulihan jangka panjang bagi mereka yang terkena dampak bencana di Malang, sementara juga mendorong keterlibatan aktif masyarakat dan membangun kemitraan yang kokoh untuk memberikan dampak positif yang nyata.</p>
-                        <a href="" class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2">Learn More</a>
+                        <p class="text-white mb-4">RescueAid memiliki komitmen kuat untuk memberikan bantuan darurat dan pemulihan jangka panjang bagi mereka yang terkena dampak bencana di Malang, sementara juga mendorong keterlibatan aktif masyarakat dan membangun kemitraan yang kokoh untuk memberikan dampak positif yang nyata.</p>
+                        <a href="#contact" class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -293,21 +293,21 @@
                             <i class="far fa-smile-beam fs-4 text-white"></i>
                         </div>
                         <h3>Kolaborasi</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">Kami membangun hubungan kemitraan yang kuat dengan berbagai pihak termasuk organisasi bantuan, pemerintah, dan lembaga swadaya.</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-user-tie fs-4 text-white"></i>
                         </div>
                         <h3>Ketahanan</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">berkomitmen untuk meningkatkan ketahanan masyarakat terhadap bencana melalui penyuluhan dan pelatihan tentang pencegahan bencana alam.</p>
                     </div>
                     <div class="col-12">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                             <i class="fa fa-headset fs-4 text-white"></i>
                         </div>
                         <h3>Dampak Langsung</h3>
-                        <p class="mb-0">Magna sea eos sit dolor, ipsum amet ipsum lorem diam dolor eos diam et diam dolor ea</p>
+                        <p class="mb-0">Memberikan dukungan langsung dan nyata kepada mereka yang membutuhkan, membantu membangun kembali kehidupan dan harapan masyarakat.</p>
                     </div>
                 </div>
             </div>
@@ -453,7 +453,7 @@
     <section id="service">
     <div class="container-fluid py-6 px-5">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-            <h1 class="display-5 mb-0">Latest Blog Post</h1>
+            <h1 class="display-5 mb-0">Dokumentasi</h1>
             <hr class="w-25 mx-auto bg-primary">
         </div>
         <div class="row g-5">
@@ -546,21 +546,21 @@
             <div class="col-lg-3 col-md-6">
                 <h3 class="text-white mb-4">Quick Links</h3>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog Post</a>
-                    <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    <a class="text-secondary mb-2" href="#home"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                    <a class="text-secondary mb-2" href="#about"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                    <a class="text-secondary mb-2" href="#service"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                    <a class="text-secondary mb-2" href="#contact"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog Post</a>
+                    <a class="text-secondary" href="#contact"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h3 class="text-white mb-4">Popular Links</h3>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                    <a class="text-secondary mb-2" href="#home"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                    <a class="text-secondary mb-2" href="#about"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                    <a class="text-secondary mb-2" href="#service"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
                     <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog Post</a>
-                    <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                    <a class="text-secondary" href="#contact"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
