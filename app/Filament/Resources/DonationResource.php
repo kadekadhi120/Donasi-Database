@@ -50,25 +50,21 @@ class DonationResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('donation_id')
-                ->label('Donation ID')
-                ->sortable(),
-                TextColumn::make('donor_NIK')
-            ->label('Donor Name')
-            // ->getTable (function ($record) {
-            //     return $record->donors->donor_name;
-            // })
-            ->sortable(),
-                
-            TextColumn::make('food_id'),
-            
-                
-           TextColumn::make('donation_amount')
-                ->label('Donation Amount')
-                ->sortable(),
-            TextColumn::make('donation_date')
-                ->label('Donation Date')
-                ->sortable()
-                ->date('Y-m-d'),
+                    ->label('Donation ID')
+                    ->sortable()->searchable(),
+                TextColumn::make('donor.donor_name')
+                    ->label('Donor Name')
+                    ->sortable()->searchable(),
+                TextColumn::make('foodInventory.food_name')
+                    ->label('Food Inventory')
+                    ->sortable()->searchable(),
+                TextColumn::make('donation_amount')
+                    ->label('Donation Amount')
+                    ->sortable()->searchable(),
+                TextColumn::make('donation_date')
+                    ->label('Donation Date')
+                    ->sortable()->searchable()
+                    ->date('Y-m-d'),
             ])
             ->filters([ 
                 //

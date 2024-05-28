@@ -12,13 +12,23 @@ class Donation extends Model
 
     protected $fillable = ['donation_id', 'staff_id', 'donor_NIK', 'food_id', 'donation_amount', 'donation_date'];
 
-    public function foodInventory(): BelongsTo
+    // public function foodInventory(): BelongsTo
+    // {
+    //     return $this->belongsTo(FoodInventory::class, 'food_id');
+    // }
+
+    // public function donor(): BelongsTo
+    // {
+    //     return $this->belongsTo(Donor::class, 'donor_NIK');
+    // }
+
+    public function donor()
     {
-        return $this->belongsTo(FoodInventory::class, 'food_id');
+        return $this->belongsTo(Donor::class, 'donor_NIK', 'donor_NIK');
     }
 
-    public function donor(): BelongsTo
+    public function foodInventory()
     {
-        return $this->belongsTo(Donor::class, 'donor_NIK');
+        return $this->belongsTo(FoodInventory::class, 'food_id', 'food_id');
     }
 }

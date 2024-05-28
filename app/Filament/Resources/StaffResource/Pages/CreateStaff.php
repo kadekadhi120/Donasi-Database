@@ -7,7 +7,10 @@ use App\Models\User;
 use Filament\Actions;
 use App\Filament\Resources\StaffResource;
 use Filament\Resources\Pages\CreateRecord;
-use Hash;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class CreateStaff extends CreateRecord
 {
@@ -15,16 +18,21 @@ class CreateStaff extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
+ 
+        // Buat User baru
         $user = User::create([
-            "name"=> $data["staff_name"],
-            "email"=> $data["email"],
-            "password"=> Hash::make($data["password"]),
+            "name" => $data["staff_name"],
+            "email" => 'email',
+            "password" => Hash::make("password"),
         ]);
 
-        unset($data["email"], $data["password"]);
+        // Hapus email dan password dari data
+        // unset($data["email"], $data["password"]);
 
+        // Tambahkan user_id ke data staff
         $data["user_id"] = $user->id;
 
         return $data;
     }
+
 }
