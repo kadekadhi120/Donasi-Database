@@ -13,8 +13,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Distribution extends Model
 {
     use HasFactory;
-
-    protected $fillable = ['distribution_id', 'need_id', 'volunteer_id', 'staff_id', 'deskripsi', 'distribution_date'];
+    public $timestamps = false;
+    protected $fillable = ['distribution_id', 'need_id', 'volunteer_id', 'staff_id','link', 'deskripsi', 'distribution_date'];
 
     public function Need():BelongsTo
     {

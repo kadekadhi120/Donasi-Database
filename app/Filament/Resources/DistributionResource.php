@@ -15,6 +15,8 @@ use App\Models\FoodInventory;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\DistributionResource\Pages;
@@ -55,7 +57,7 @@ class DistributionResource extends Resource
                     ->label('Volunteer')
                     ->options(
                         Volunteer::all()->mapWithKeys(function ($volunteers) {
-                            return [$volunteers->volunteers => $volunteers->volunteer_id . ' - ' . $volunteers->volunteer_name];
+                            return [$volunteers->volunteer_id => $volunteers->volunteer_id . ' - ' . $volunteers->volunteer_name];
                         })
                     )
                     ->searchable()
@@ -65,12 +67,21 @@ class DistributionResource extends Resource
                     ->label('Staff')
                     ->options(
                         Staff::all()->mapWithKeys(function ($staff) {
-                            return [$staff->staff => $staff->staff_id. ' - ' . $staff->staff_name];
+                            return [$staff->staff_id => $staff->staff_id. ' - ' . $staff->staff_name];
                         })
                     )
                     ->searchable()
                     ->required(),
+
+                    TextInput::make('link')
+                    ->label('URL')
+                    ->url()
+                    ->required()
+                    ->helperText('For example: https://www.google.com/'),
                 
+                    TextInput::make('deskripsi')->required(),
+
+                    DatePicker::make('distribution_date')->required()->format('Y-m-d'),
             ]);
     }
 
