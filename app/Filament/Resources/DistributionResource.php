@@ -14,6 +14,7 @@ use App\Models\Distribution;
 use App\Models\FoodInventory;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
@@ -89,7 +90,28 @@ class DistributionResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('distribution_id')
+                ->label('Distribusi ID')
+                ->sortable()->searchable(),
+            TextColumn::make('need_id')
+                ->label('Need ID')
+                ->sortable()->searchable(),
+                TextColumn::make('location_id')
+                ->label('Loction ID')
+                ->sortable()->searchable(),
+                TextColumn::make('volunteer_id')
+                ->label('Volunteer ID')
+                ->sortable()->searchable(),
+                TextColumn::make('staff_id')
+                ->label('Staff ID')
+                ->sortable()->searchable(),
+                TextColumn::make('distribution_date')
+                    ->label('Distribution Date')
+                    ->sortable()->searchable()
+                    ->date('Y-m-d'),
+                TextColumn::make('link')
+                    ->label('URL')
+                    ->copyable(),
             ])
             ->filters([
                 //

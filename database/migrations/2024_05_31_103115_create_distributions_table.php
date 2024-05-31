@@ -12,6 +12,7 @@ class CreateDistributionsTable extends Migration
             $table->id();
             $table->string('distribution_id', 10)->unique();
             $table->string('need_id', 10)->nullable();
+            $table->string('location_id', 10)->nullable();
             $table->string('volunteer_id', 10)->nullable();
             $table->string('staff_id', 10)->nullable();
             $table->string('link', 255);
@@ -22,6 +23,7 @@ class CreateDistributionsTable extends Migration
             $table->foreign('need_id')->references('need_id')->on('needs')->onDelete('cascade');
             $table->foreign('volunteer_id')->references('volunteer_id')->on('volunteers')->onDelete('cascade');
             $table->foreign('staff_id')->references('staff_id')->on('staff')->onDelete('cascade');
+            $table->foreign('location_id')->references('location_id')->on('locations')->onDelete('cascade');
         });
     }
 

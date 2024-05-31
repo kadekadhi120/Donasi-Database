@@ -11,6 +11,7 @@ use Filament\Tables\Table;
 use App\Models\FoodInventory;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\NeedResource\Pages;
@@ -51,7 +52,33 @@ class NeedResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('need_id')
+                ->label('Need ID')
+                ->sortable()->searchable(),
+            TextColumn::make('location.provinsi')
+                ->label('Provinsi')
+                ->sortable()->searchable(),
+                TextColumn::make('location.KabupatenKota')
+                ->label('KabupatenKota')
+                ->sortable()->searchable(),
+                TextColumn::make('location.kecamatan')
+                ->label('kecamatan')
+                ->sortable()->searchable(),
+                TextColumn::make('location.KelurahanDesa')
+                ->label('KelurahanDesa')
+                ->sortable()->searchable(),
+                TextColumn::make('location.RTRW')
+                ->label('RTRW')
+                ->sortable()->searchable(),
+                TextColumn::make('location.total_KK')
+                ->label('total_KK')
+                ->sortable()->searchable(),
+            TextColumn::make('foodInventory.food_name')
+                ->label('Food Name')
+                ->sortable()->searchable(),
+            TextColumn::make('quantity')
+                ->label('Donation Amount')
+                ->sortable()->searchable(),
             ])
             ->filters([
                 //

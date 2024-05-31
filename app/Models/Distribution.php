@@ -14,7 +14,7 @@ class Distribution extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['distribution_id', 'need_id', 'volunteer_id', 'staff_id','link', 'deskripsi', 'distribution_date'];
+    protected $fillable = ['distribution_id', 'need_id', 'location_id','volunteer_id', 'staff_id','link', 'deskripsi', 'distribution_date'];
 
     public function Need():BelongsTo
     {
