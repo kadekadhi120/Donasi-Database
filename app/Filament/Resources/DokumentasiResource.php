@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -51,8 +52,9 @@ class DokumentasiResource extends Resource
                     ])
                     ->imageCropAspectRatio('16:9')
                     ->imageResizeMode('cover')
-                    ->imageEditorMode(1)
+                    ->imageEditorMode(1),
                    
+                DatePicker::make('dokumentasi_date')->required()->format('Y-m-d'),
             ]);
     }
 
@@ -69,6 +71,11 @@ class DokumentasiResource extends Resource
             TextColumn::make('link')
                 ->label('URL')
                 ->copyable(),
+
+                TextColumn::make('dokumentasi_date')
+                ->label('Dokumentasi Date')
+                ->sortable()->searchable()
+                ->date('Y-m-d'),
             ])
             ->filters([
                 //

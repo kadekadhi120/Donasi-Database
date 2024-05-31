@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title', 255);
             $table->string('link', 255);
             $table->string('path', 255);
+            $table->date('dokumentasi_date')->nullable();
             $table->timestamps();
         });
     }

@@ -12,6 +12,7 @@ class dokumentasi extends Model
         'title',
         'link',
         'path',
+        'dokumentasi_date',
         
     ];
 }
