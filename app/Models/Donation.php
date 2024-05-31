@@ -22,12 +22,12 @@ class Donation extends Model
     //     return $this->belongsTo(Donor::class, 'donor_NIK');
     // }
 
-    public function donor()
+    public function donor(): BelongsTo
     {
         return $this->belongsTo(Donor::class, 'donor_NIK', 'donor_NIK');
     }
 
-    public function foodInventory()
+    public function foodInventory(): BelongsTo
     {
         return $this->belongsTo(FoodInventory::class, 'food_id', 'food_id');
     }

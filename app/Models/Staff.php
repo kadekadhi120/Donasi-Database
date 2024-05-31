@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Distribution;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -14,5 +16,10 @@ class Staff extends Model
     public function user(): BelongsTo
     {
         return $this->BelongsTo(User::class);
+    }
+
+    public function Distribution(): HasOne
+    {
+        return $this->hasOne(Distribution::class);
     }
 }
