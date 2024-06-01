@@ -44,7 +44,7 @@ class NeedResource extends Resource
                     ->options(FoodInventory::all()->pluck('food_name', 'food_id'))
                     ->searchable()
                     ->required(),
-                    TextInput::make('quantity')->required(),
+                    TextInput::make('need_amount')->required(),
             ]);
     }
 
@@ -76,8 +76,8 @@ class NeedResource extends Resource
             TextColumn::make('foodInventory.food_name')
                 ->label('Food Name')
                 ->sortable()->searchable(),
-            TextColumn::make('quantity')
-                ->label('Donation Amount')
+            TextColumn::make('need_amount')
+                ->label('Need Amount')
                 ->sortable()->searchable(),
             ])
             ->filters([

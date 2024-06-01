@@ -13,7 +13,7 @@ class CreateNeedsTable extends Migration
             $table->string('need_id', 10)->unique();
             $table->string('location_id', 10)->nullable();
             $table->string('food_id', 10)->nullable();
-            $table->integer('quantity')->nullable();
+            $table->integer('need_amount')->nullable();
 
             // Foreign key constraints
             $table->foreign('location_id')->references('location_id')->on('locations')->onDelete('cascade');
