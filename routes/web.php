@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DokumentasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +27,10 @@ Route::get('/master', function () {
     return view('master');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+
+
+Route::get('/', [DokumentasiController::class, 'index'])->name('home');
+
 
 Route::get('/loginstaff', function(){
     return view('loginstaff');

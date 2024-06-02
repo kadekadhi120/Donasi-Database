@@ -52,7 +52,8 @@ class DokumentasiResource extends Resource
                     ])
                     ->imageCropAspectRatio('16:9')
                     ->imageResizeMode('cover')
-                    ->imageEditorMode(1),
+                    ->imageEditorMode(1)
+                    ->columnSpanFull(),
                    
                 DatePicker::make('dokumentasi_date')->required()->format('Y-m-d'),
             ]);
@@ -80,6 +81,8 @@ class DokumentasiResource extends Resource
             ->filters([
                 //
             ])
+            ->authorizeReorder()
+            ->paginated(false)
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
