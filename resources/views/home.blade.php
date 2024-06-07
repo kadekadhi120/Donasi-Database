@@ -448,6 +448,59 @@
     </div> -->
     <!-- Testimonial End -->
 
+@php
+    $data = \App\Helpers\DataHelper::getData();
+@endphp
+    
+    <body>
+    <section id="service">
+        <div class="container-fluid py-6 px-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5 mb-0">Open Donasi</h1>
+                <hr class="w-25 mx-auto bg-primary">
+            </div>
+            <div class="row g-5">
+            @foreach($data['donasiResult'] as $donasi)
+    <!-- Konten yang berhubungan dengan donasi -->
+    <div class="col-lg-4">
+        <a href="https://api.whatsapp.com/send?phone=6282111318887">
+            <div class="blog-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid" src="{{ asset('storage/' . $donasi->path) }}" alt="{{ $donasi->title }}">
+        
+                </div>
+                <div class="bg-secondary d-flex">
+                    <div class="flex-shrink-0 d-flex flex-column justify-content-center text-center bg-primary text-white px-4">
+                        <span>{{ \Carbon\Carbon::parse($donasi->open_date)->format('d') }}</span>
+                        <h5 class="text-uppercase m-0">{{ \Carbon\Carbon::parse($donasi->open_date)->format('M') }}</h5>
+                        <span>{{ \Carbon\Carbon::parse($donasi->open_date)->format('Y') }}</span>
+                    </div>
+                        <div class="d-flex flex-column justify-content-center py-3 px-4">
+                            <div class="d-flex mb-2">
+                                <small class="text-uppercase me-3"><i class="bi bi-person me-2"></i>Membutuhkan Donasi</small>
+                                
+                            </div>
+                            <h4>{{ $donasi->title }}</h4>
+                            <p>{{ $donasi->deskripsi }}</p>
+                            <p>Open Date: {{ $donasi->open_date }}</p>
+                            <p>Close Date: {{ $donasi->close_date }}</p>
+                            <!-- <a href="https://api.whatsapp.com/send?phone=6282111318887">
+                                <button class="btn btn-primary">Donasi Sekarang</button>
+                            </a> -->
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+@endforeach
+              
+              
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
 
     <!-- Blog Start -->
     <body>
@@ -458,34 +511,40 @@
                 <hr class="w-25 mx-auto bg-primary">
             </div>
             <div class="row g-5">
-                @foreach($dokumentasi as $item)
-                <div class="col-lg-4">
-                    <div class="blog-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('storage/' . $item->path) }}" alt="{{ $item->title }}">
+            @foreach($data['dokumentasiResult'] as $item)
+    <!-- Konten yang berhubungan dengan dokumentasi -->
+    <div class="col-lg-4">
+        <a href="{{ $item->link }}" class="blog-item-link">
+            <div class="blog-item">
+                <div class="position-relative overflow-hidden">
+                    <img class="img-fluid" src="{{ asset('storage/' . $item->path) }}" alt="{{ $item->title }}">
+                </div>
+                <div class="bg-secondary d-flex">
+                    <div class="flex-shrink-0 d-flex flex-column justify-content-center text-center bg-primary text-white px-4">
+                        <span>{{ \Carbon\Carbon::parse($item->dokumentasi_date)->format('d') }}</span>
+                        <h5 class="text-uppercase m-0">{{ \Carbon\Carbon::parse($item->dokumentasi_date)->format('M') }}</h5>
+                        <span>{{ \Carbon\Carbon::parse($item->dokumentasi_date)->format('Y') }}</span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center py-3 px-4">
+                        <div class="d-flex mb-2">
+                            <small class="text-uppercase me-3"><i class="bi bi-person me-2"></i></small>
+                            <small class="text-uppercase me-3"><i class="bi bi-bookmarks me-2"></i></small>
                         </div>
-                        <div class="bg-secondary d-flex">
-                            <div class="flex-shrink-0 d-flex flex-column justify-content-center text-center bg-primary text-white px-4">
-                                <span>{{ \Carbon\Carbon::parse($item->dokumentasi_date)->format('d') }}</span>
-                                <h5 class="text-uppercase m-0">{{ \Carbon\Carbon::parse($item->dokumentasi_date)->format('M') }}</h5>
-                                <span>{{ \Carbon\Carbon::parse($item->dokumentasi_date)->format('Y') }}</span>
-                            </div>
-                            <div class="d-flex flex-column justify-content-center py-3 px-4">
-                                <div class="d-flex mb-2">
-                                    <small class="text-uppercase me-3"><i class="bi bi-person me-2"></i>Admin</small>
-                                    <small class="text-uppercase me-3"><i class="bi bi-bookmarks me-2"></i>Web Design</small>
-                                </div>
-                                <a class="h4" href="{{ $item->link }}">{{ $item->title }}</a>
-                            </div>
-                        </div>
+                        <h4>{{ $item->title }}</h4>
                     </div>
                 </div>
-                @endforeach
+            </div>
+        </a>
+    </div>
+                    
+@endforeach
+               
             </div>
         </div>
     </section>
 </body>
 </html>
+
     <!-- Blog End -->
     
 

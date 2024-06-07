@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\DonasiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DokumentasiController;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,7 @@ Route::get('/navbar', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/master', function () {
@@ -29,7 +30,17 @@ Route::get('/master', function () {
 
 
 
-Route::get('/', [DokumentasiController::class, 'index'])->name('home');
+
+
+
+
+//Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+
+// Route::get('/', [DokumentasiController::class, 'indexdokumentasi'])->name('dokumentasi.home');
+
+// Route::get('/', [DonasiController::class, 'indexdonasi'])->name('donasi.home');
 
 
 Route::get('/loginstaff', function(){

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DokumentasiController extends Controller
 {
-    public function index()
+    public function indexdokumentasi()
     {
         // Mengambil semua data dokumentasi
         $dokumentasi = Dokumentasi::all();
