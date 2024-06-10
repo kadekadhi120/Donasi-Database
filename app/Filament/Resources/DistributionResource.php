@@ -35,7 +35,7 @@ class DistributionResource extends Resource
             ->schema([
                 TextInput::make('distribution_id')->required(),
                 Select::make('need_id')
-                    ->label('Barang Yang Didonasikan')
+                    ->label('Barang Yang Dibutuhkan')
                     ->options(
                         Need::all()->mapWithKeys(function ($needs) {
                             return [$needs->need_id => $needs->need_id . ' - ' . $needs->location_id];

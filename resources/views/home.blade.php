@@ -463,7 +463,7 @@
             @foreach($data['donasiResult'] as $donasi)
     <!-- Konten yang berhubungan dengan donasi -->
     <div class="col-lg-4">
-        <a href="https://api.whatsapp.com/send?phone=6282111318887">
+        <a href="https://api.whatsapp.com/send?phone=628115280035">
             <div class="blog-item">
                 <div class="position-relative overflow-hidden">
                     <img class="img-fluid" src="{{ asset('storage/' . $donasi->path) }}" alt="{{ $donasi->title }}">
