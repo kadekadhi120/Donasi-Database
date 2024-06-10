@@ -256,3 +256,21 @@ h6,
 .justified-text {
     text-align: justify;
 }
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #39e868; /* Warna background sesuai dengan kelas btn-primary */
+    color: white; /* Warna teks */
+    border-radius: 50%; /* Membuat lingkaran */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+.back-to-top:hover {
+    background-color: #0056b3; /* Warna background saat dihover */
+}

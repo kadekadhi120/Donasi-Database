@@ -610,9 +610,11 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
+    <a href="https://api.whatsapp.com/send/?phone=%2B628115280035&text&type=phone_number&app_absent=0" class="back-to-top">
+        <i class="bi bi-whatsapp"></i>
+        <!-- Anda bisa menggunakan simbol Unicode atau pustaka ikon -->
+        <!-- &#x1F4F2; Simbol Unicode untuk ikon telepon, jika pustaka ikon tidak tersedia -->
+    </a>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
